@@ -6,9 +6,16 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		7351F0E41D0A2AD000DFB033 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7351F0E31D0A2AD000DFB033 /* Logger.swift */; };
+		7351F0E71D0A2B6B00DFB033 /* String+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7351F0E61D0A2B6B00DFB033 /* String+Addition.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		7351F0D71D0A2A4D00DFB033 /* Logger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Logger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7351F0DC1D0A2A4D00DFB033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7351F0E31D0A2AD000DFB033 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		7351F0E61D0A2B6B00DFB033 /* String+Addition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Addition.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,9 +48,27 @@
 		7351F0D91D0A2A4D00DFB033 /* Logger */ = {
 			isa = PBXGroup;
 			children = (
+				7351F0E21D0A2AC700DFB033 /* classes */,
 				7351F0DC1D0A2A4D00DFB033 /* Info.plist */,
 			);
 			path = Logger;
+			sourceTree = "<group>";
+		};
+		7351F0E21D0A2AC700DFB033 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				7351F0E51D0A2B6000DFB033 /* extension */,
+				7351F0E31D0A2AD000DFB033 /* Logger.swift */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
+		7351F0E51D0A2B6000DFB033 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				7351F0E61D0A2B6B00DFB033 /* String+Addition.swift */,
+			);
+			path = extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +148,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7351F0E71D0A2B6B00DFB033 /* String+Addition.swift in Sources */,
+				7351F0E41D0A2AD000DFB033 /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +250,7 @@
 		7351F0E01D0A2A4D00DFB033 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -233,12 +261,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nerd0geek1.Logger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		7351F0E11D0A2A4D00DFB033 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
