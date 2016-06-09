@@ -6,13 +6,8 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		7351F0DB1D0A2A4D00DFB033 /* Logger.h in Headers */ = {isa = PBXBuildFile; fileRef = 7351F0DA1D0A2A4D00DFB033 /* Logger.h */; settings = {ATTRIBUTES = (Public, ); }; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
 		7351F0D71D0A2A4D00DFB033 /* Logger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Logger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7351F0DA1D0A2A4D00DFB033 /* Logger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
 		7351F0DC1D0A2A4D00DFB033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -46,7 +41,6 @@
 		7351F0D91D0A2A4D00DFB033 /* Logger */ = {
 			isa = PBXGroup;
 			children = (
-				7351F0DA1D0A2A4D00DFB033 /* Logger.h */,
 				7351F0DC1D0A2A4D00DFB033 /* Info.plist */,
 			);
 			path = Logger;
@@ -59,7 +53,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7351F0DB1D0A2A4D00DFB033 /* Logger.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
