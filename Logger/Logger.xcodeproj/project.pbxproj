@@ -120,9 +120,9 @@
 			productReference = 730880951D12E70C005FA0F5 /* Logger.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		7351F0D61D0A2A4D00DFB033 /* Logger */ = {
+		7351F0D61D0A2A4D00DFB033 /* Logger-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7351F0DF1D0A2A4D00DFB033 /* Build configuration list for PBXNativeTarget "Logger" */;
+			buildConfigurationList = 7351F0DF1D0A2A4D00DFB033 /* Build configuration list for PBXNativeTarget "Logger-iOS" */;
 			buildPhases = (
 				7351F0D21D0A2A4D00DFB033 /* Sources */,
 				7351F0D31D0A2A4D00DFB033 /* Frameworks */,
@@ -133,7 +133,7 @@
 			);
 			dependencies = (
 			);
-			name = Logger;
+			name = "Logger-iOS";
 			productName = Logger;
 			productReference = 7351F0D71D0A2A4D00DFB033 /* Logger.framework */;
 			productType = "com.apple.product-type.framework";
@@ -167,7 +167,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7351F0D61D0A2A4D00DFB033 /* Logger */,
+				7351F0D61D0A2A4D00DFB033 /* Logger-iOS */,
 				730880941D12E70C005FA0F5 /* Logger-MacOS */,
 			);
 		};
@@ -359,7 +359,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nerd0geek1.Logger;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Logger;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -377,7 +377,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nerd0geek1.Logger;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Logger;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -403,7 +403,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7351F0DF1D0A2A4D00DFB033 /* Build configuration list for PBXNativeTarget "Logger" */ = {
+		7351F0DF1D0A2A4D00DFB033 /* Build configuration list for PBXNativeTarget "Logger-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7351F0E01D0A2A4D00DFB033 /* Debug */,
