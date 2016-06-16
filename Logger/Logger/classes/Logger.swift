@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import UIKit
 
 final public class Logger {
 
@@ -16,24 +15,24 @@ final public class Logger {
     //MARK: - public
 
     final public class func LOGError<T>(value: T, fileName: String = #file, line: Int = #line, methodName: String = #function) {
-        LOG(value, fileName: fileName, line: line, methodName: methodName, color: .redColor())
+        LOG(value, fileName: fileName, line: line, methodName: methodName, red: 255, green: 0, blue: 0)
     }
 
     final public class func LOGWarn<T>(value: T, fileName: String = #file, line: Int = #line, methodName: String = #function) {
-        LOG(value, fileName: fileName, line: line, methodName: methodName, color: .yellowColor())
+        LOG(value, fileName: fileName, line: line, methodName: methodName, red: 255, green: 255, blue: 0)
     }
 
     final public class func LOGInfo<T>(value: T, fileName: String = #file, line: Int = #line, methodName: String = #function) {
-        LOG(value, fileName: fileName, line: line, methodName: methodName, color: .cyanColor())
+        LOG(value, fileName: fileName, line: line, methodName: methodName, red: 0, green: 255, blue: 255)
     }
 
     final public class func LOG<T>(value: T, fileName: String = #file, line: Int = #line, methodName: String = #function) {
-        LOG(value, fileName: fileName, line: line, methodName: methodName, color: .blueColor())
+        LOG(value, fileName: fileName, line: line, methodName: methodName, red: 0, green: 0, blue: 255)
     }
 
     //MARK: - private
 
-    private class func LOG<T>(value: T, fileName: String, line: Int, methodName: String, color: UIColor = .grayColor()) {
+    private class func LOG<T>(value: T, fileName: String, line: Int, methodName: String, red: Float = 0, green: Float = 0, blue: Float = 0) {
         if !shouldOutput {
             return
         }
@@ -43,13 +42,7 @@ final public class Logger {
         let fileName: String = fileName.lastPathComponent.stringByDeletingPathExtension
         let string: String   = "\n\nclass:\(fileName)\nline:\(line)\nmethod:\(methodName)\n\(value)\n\n"
 
-        var red: CGFloat   = 0
-        var green: CGFloat = 0
-        var blue: CGFloat  = 0
-        var alpha: CGFloat = 0
-        color.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
-
-        let coloringParams: String = "fg\(Int(red * 255)),\(Int(green * 255)),\(Int(blue * 255));"
+        let coloringParams: String = "fg\(Int(red)),\(Int(green)),\(Int(blue));"
         let text: String = "\(ESCAPE)\(coloringParams)\(string)\(RESET)"
 
         print(text)
