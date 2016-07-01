@@ -10,7 +10,8 @@ import Foundation
 
 final public class Logger {
 
-    static public var shouldOutput: Bool = true
+    static public var shouldOutput: Bool   = true
+    static public var useXcodeColors: Bool = true
 
     //MARK: - public
 
@@ -43,7 +44,13 @@ final public class Logger {
         let string: String   = "\n\nclass:\(fileName)\nline:\(line)\nmethod:\(methodName)\n\(value)\n\n"
 
         let coloringParams: String = "fg\(Int(red)),\(Int(green)),\(Int(blue));"
-        let text: String = "\(ESCAPE)\(coloringParams)\(string)\(RESET)"
+
+        let text: String
+        if useXcodeColors {
+            text = "\(ESCAPE)\(coloringParams)\(string)\(RESET)"
+        } else {
+            text = string
+        }
 
         print(text)
     }
