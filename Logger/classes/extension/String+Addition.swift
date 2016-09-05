@@ -13,7 +13,7 @@ extension String {
         return (self as NSString).lastPathComponent
     }
 
-    var stringByDeletingPathExtension: String {
-        return (self as NSString).stringByDeletingPathExtension
+    var deletingPathExtension: String {
+        return (self as NSString).deletingPathExtension
     }
 }
