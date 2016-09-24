@@ -149,9 +149,11 @@
 				TargetAttributes = {
 					730880941D12E70C005FA0F5 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 					7351F0D61D0A2A4D00DFB033 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -230,6 +232,7 @@
 				PRODUCT_NAME = Logger;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -251,6 +254,7 @@
 				PRODUCT_NAME = Logger;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -362,6 +366,7 @@
 				PRODUCT_NAME = Logger;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -379,6 +384,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nerd0geek1.Logger;
 				PRODUCT_NAME = Logger;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

@@ -26,9 +26,10 @@ If you want to stop logging, update `shouldOutput` as below.
 
 ## Requirements
 - iOS 9.0+, OS X 10.10+
-- Xcode 7.3 or above
+- Xcode 8.0 or above
 
-Logger is now supporting Swift2.2.
+Logger is now supporting Swift3.
+If you want to use with Swift2.2, please use Swift2.2 branch.
 
 ## Installation
 Logger supports multiple platform(iOS/MacOS), and supports only Carthage.
