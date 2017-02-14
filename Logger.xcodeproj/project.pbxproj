@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		735AA0C11E528A0000F1C3D0 /* SwiftLint */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 735AA0C41E528A0000F1C3D0 /* Build configuration list for PBXAggregateTarget "SwiftLint" */;
+			buildPhases = (
+				735AA0C51E528A1800F1C3D0 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = SwiftLint;
+			productName = SwiftLint;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		7308809D1D12E746005FA0F5 /* String+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7351F0E61D0A2B6B00DFB033 /* String+Addition.swift */; };
 		7308809E1D12E746005FA0F5 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7351F0E31D0A2AD000DFB033 /* Logger.swift */; };
@@ -155,6 +169,10 @@
 						CreatedOnToolsVersion = 7.3.1;
 						LastSwiftMigration = 0800;
 					};
+					735AA0C11E528A0000F1C3D0 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 7351F0D11D0A2A4D00DFB033 /* Build configuration list for PBXProject "Logger" */;
@@ -171,6 +189,7 @@
 			targets = (
 				7351F0D61D0A2A4D00DFB033 /* Logger-iOS */,
 				730880941D12E70C005FA0F5 /* Logger-MacOS */,
+				735AA0C11E528A0000F1C3D0 /* SwiftLint */,
 			);
 		};
 /* End PBXProject section */
@@ -191,6 +210,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		735AA0C51E528A1800F1C3D0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		730880901D12E70C005FA0F5 /* Sources */ = {
@@ -388,6 +423,20 @@
 			};
 			name = Release;
 		};
+		735AA0C21E528A0000F1C3D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		735AA0C31E528A0000F1C3D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -417,6 +466,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		735AA0C41E528A0000F1C3D0 /* Build configuration list for PBXAggregateTarget "SwiftLint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				735AA0C21E528A0000F1C3D0 /* Debug */,
+				735AA0C31E528A0000F1C3D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
